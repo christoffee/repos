@@ -8,10 +8,10 @@
  * Controller of the reposApp
  */
 angular.module('reposApp')
-  .controller('ReposCtrl', function ($scope, GitHubRepos) {
+  .controller('ReposCtrl', function($scope, GitHubRepos) {
     $scope.repos = [];
-    GitHubRepos.get({developer: 'christoffee'})
-        .$promise.then(function(repos) {
-          $scope.repos = repos;
-        });
+    $scope.developer = 'christoffee';
+    GitHubRepos.getRepos($scope.developer).then(function(response) {
+        $scope.repos = response;
+    });
   });

@@ -2,7 +2,8 @@
 <a class="btn btn-primary" href="#/" role="button">Back</a>
 <div ng-if="details">
     <ul class="list-group">
-        <li class="list-group-item" ng-repeat="(key, value) in details">
-            <strong>{{key}}</strong>: {{value}}</li>
+        <li class="list-group-item detail" ng-repeat="(key, value) in details">
+            <strong>{{key}}</strong>: <small>{{value}}</small>
+        </li>
     </ul>
 </div>

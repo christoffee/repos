@@ -20,7 +20,7 @@ angular.module('reposApp')
         return  $http.get('https://api.github.com/users/' + developer + '/repos').then(function(response) {
             model.repos = response.data;
 
-            return model.repos
+            return model.repos;
         });
-    }
+    };
   });

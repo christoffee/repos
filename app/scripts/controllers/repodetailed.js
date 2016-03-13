@@ -11,7 +11,7 @@ angular.module('reposApp')
   .controller('RepoDetailedCtrl', function ($scope, $routeParams, GitHubRepos) {
     $scope.title = $routeParams.reponame;
     $scope.details = _.filter(GitHubRepos.repos, function(repo) {
-        return $scope.title == repo['name']
+        return $scope.title === repo.name;
     })[0];
 
   });

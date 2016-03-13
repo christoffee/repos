@@ -1,9 +1,26 @@
-<h1>{{title}}<h1>
-<a class="btn btn-primary" href="#/" role="button">Back</a>
+<div>
+    <a class="btn btn-primary pull-right" href="#/" role="button">Back</a>
+    <h1>{{title}}<h1>
+</div>
 <div ng-if="details">
     <ul class="list-group">
-        <li class="list-group-item detail" ng-repeat="(key, value) in details">
-            <strong>{{key}}</strong>: <small>{{value}}</small>
+        <li class="list-group-item detail">
+            <strong>Name</strong>: <small>{{details.name}}</small>
+        </li>
+        <li class="list-group-item detail">
+            <strong>Description</strong>: <small>{{details.description}}</small>
+        </li>
+        <li class="list-group-item detail">
+            <strong>Url</strong>: <small>{{details.url}}</small>
+        </li>
+        <li class="list-group-item detail">
+            <strong>Stars</strong>: <small>{{details.stargazers_count}}</small>
+        </li>
+        <li class="list-group-item detail">
+            <strong>Watchers</strong>: <small>{{details.watchers}}</small>
+        </li>
+        <li class="list-group-item detail">
+            <strong>Forks</strong>: <small>{{details.forks_count}}</small>
         </li>
     </ul>
 </div>

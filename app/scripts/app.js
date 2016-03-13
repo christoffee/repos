@@ -20,6 +20,11 @@ angular
         controller: 'ReposCtrl',
         controllerAs: 'repos'
       })
+      .when('/:reponame', {
+        templateUrl: 'views/repo-detailed.html',
+        controller: 'RepoDetailedCtrl',
+        controllerAs: 'repoDetailed'
+      })
       .otherwise({
         redirectTo: '/'
       });

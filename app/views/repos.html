@@ -3,5 +3,7 @@
   <a ng-href='#/{{repo.name}}' class="list-group-item" ng-repeat="repo in repos | orderBy:'-stargazers_count'">
       {{repo.name}}
       <span class="label label-default label-pill pull-xs-right">{{repo.stargazers_count}} stars</span>
+      <span class="label label-default label-pill pull-xs-right">{{repo.watchers}} watchers</span>
+      <span class="label label-default label-pill pull-xs-right">{{repo.forks_count}} forks</span>
   </a>
 </div>

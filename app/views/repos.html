@@ -1,6 +1,6 @@
-<h1>Repos</h1>
-<div class="list-group">
-  <a href="#" class="list-group-item" ng-repeat="repo in repos | orderBy:'-stargazers_count'">
+<h1>Repos for {{developer}}</h1>
+<div class="list-group" ng-if="repos.length > 0">
+  <a ng-href='#/{{repo.name}}' class="list-group-item" ng-repeat="repo in repos | orderBy:'-stargazers_count'">
       {{repo.name}}
       <span class="label label-default label-pill pull-xs-right">{{repo.stargazers_count}} stars</span>
   </a>
